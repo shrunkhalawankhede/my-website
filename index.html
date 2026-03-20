@@ -17,7 +17,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 height:100vh;
-background:pink;
+background: linear-gradient(135deg, #ff9a9e, #fad0c4);
 }
 .calculator
 {
@@ -25,6 +25,8 @@ background:red;
 border-radius: 10px;
 padding:20px;
 width:280px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
 }
 .display
 {
@@ -48,15 +50,25 @@ gap:10px;
 }
 .btn
 {
-padding:5px;
-font-size:15px;
+padding:15px;
+font-size:18px;
 backgroud:#f1f1f1;
 cursor: pointer;
 border-radius:10px;
 border:1px solid #cdd;
+transition:0.2s;
+}
 
+.btn:active{
+transform: scale(0.95);
 }
+	
+h1{
+text-align:center;
+color:white;
+margin-bottom:10px;
 }
+	
 </style>
 </head>
 <body>
