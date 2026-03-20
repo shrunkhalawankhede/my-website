@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "UTF-8">
+	<meta name="viewport" content="width=device-width, intial-scale=1.0">
+	<title> Calculator </title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+body{
+font-family: Times New Roman;
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
+background:pink;
+}
+.calculator
+{
+background:red;
+border-radius: 10px;
+padding:20px;
+width:280px;
+}
+.display
+{
+width:100%
+height:50px;
+margin-bottom:10px;
+font-size:12px;
+text-align: right;
+padding:10px;
+border-radius:10px;
+border:1px solid #ccc;
+background:#f5f6f7;
+}
+.buttons
+{display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+}
+.btn:hover
+{background:yellow;
+}
+.btn
+{
+padding:5px;
+font-size:15px;
+backgroud:#f1f1f1;
+cursor: pointer;
+border-radius:10px;
+border:1px solid #cdd;
+
+}
+}
+</style>
+</head>
+<body>
+
+<div class ="calculator">
+<input type="text" id="display" class = "display" disabled>
+<div class="buttons">
+
+<button class="btn" onclick="Display(1)">1</button>
+<button class="btn" onclick="Display(2)">2</button>
+<button class="btn" onclick="Display(3)">3</button>
+<button class="btn" onclick="Display('+')">+</button>
+
+<button class="btn" onclick="Display(4)">4</button>
+<button class="btn" onclick="Display(5)">5</button>
+<button class="btn" onclick="Display(6)">6</button>
+<button class="btn" onclick="Display('-')">-</button>
+
+<button class="btn" onclick="Display(7)">7</button>
+<button class="btn" onclick="Display(8)">8</button>
+<button class="btn" onclick="Display(9)">9</button>
+<button class="btn" onclick="Display('*')">*</button>
+
+<button class="btn" onclick="Display(0)">0</button>
+<button class="btn" onclick="clearDisplay()">C</button>
+<button class="btn" onclick="Display('/')">/</button>
+<button class="btn" onclick="Result()">=</button>
+<button class="btn" onclick="Display('.')">.</button>
+
+</div>
+</div>
+<script>
+
+let display = document.getElementById('display')
+function clearDisplay()
+{
+	display.value='';
+}
+	
+function Display(value)
+{
+	display. value += value;
+}
+
+function Result()
+{
+display.value = eval(display.value);
+}
+
+
+</script>
+</body>
+</html>
